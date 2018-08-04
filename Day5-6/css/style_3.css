@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+.main {
+    margin: 0 auto;
+    width: 60%;
+}
+h1 {
+    height: 60px;
+    background-color: #858380;
+    color: white;
+    font-size: 20px;
+    line-height: 60px;
+    padding-left: 20px;
+}
+.section > div {
+    overflow: hidden;
+}
+.section h2 {
+    width: 10%;
+    height: 120px;
+    background-color: #d9d7d2;
+    float: left;
+    font-size: 14px;
+    line-height: 120px;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+.section .content {
+    width: 90%;
+    height: 120px;
+    border-bottom: 1px solid #d9d7d2;
+    border-right: 1px solid #d9d7d2;
+    box-sizing: border-box;
+    padding: 5px 0 0 10px;
+    float: left;
+}
+.item {
+    font-weight: bold;
+}
+.iteminfo div {
+    display: inline-block;
+}
