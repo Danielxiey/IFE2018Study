@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-width: 960px;
+}
+
+/* 公用部分 */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+.main {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* header部分 */
+header {
+    height: 80px;
+    background-color: #333;
+}
+header .logo a {
+    color: #fff;
+    font-size: 40px;
+    line-height: 80px;
+    float: left;
+}
+header ul {
+    float: right;
+}
+header ul li {
+    display: inline-block;
+}
+header ul li a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* banner部分 */
+.banner {
+    height: 300px;
+    background-color: #66BB33;
+}
+.banner .main {
+    height: 300px;
+}
+.banner ul {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+.banner ul li {
+    display: inline-block;
+}
+.banner ul li a {
+    display: inline-block;
+    width: 30px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 35px;
+    text-align: center;
+    vertical-align: bottom;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.banner ul li a.active {
+    padding-top: 15px;
+    background-color:  rgba(255, 255, 255, 0.8);
+    color: #000;
+    border: 1px solid #000;
+}
+
+/* main content部分 */
+.nav {
+    height: 70px;
+    border-bottom: 1px solid #DDD;
+}
+.nav .main {
+    padding-top: 20px;
+}
+.nav ul li {
+    display: inline-block;
+}
+.nav ul li a {
+    display: block;
+    width: 110px;
+    height: 50px;
+    border: 1px solid #DDD;
+    border-radius: 15px 15px 0 0;
+    line-height: 50px;
+    text-align: center;
+    color: #000;
+    background-color: #EEE;
+    margin-top: -1px;
+}
+.nav ul li a.active {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+}
+.content .column {
+    display: flex;
+    margin: 10px 0;
+    margin-right: -10px;
+}
+.content .column div {
+    height: 175px;
+    border: 1px solid #ccc;
+    flex: 1;
+    margin-right: 10px;
+    line-height: 175px;
+    text-align: center;
+}
+
+/* footer部分 */
+footer {
+    margin-top: 20px;
+    height: 120px;
+    background-color: #333;
+    color: #fff;
+    line-height: 54px;
+    text-align: center;
+}
