@@ -1,0 +1,497 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 1600px;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+
+/* public part */
+h2 {
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: 100;
+}
+.clearfix:after {
+    content: ".";
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+
+/* banner1 part */
+.banner1 {
+    width: 100%;
+    height: 990px;
+    margin: 0 auto;
+    position: relative;
+}
+.banner1-background {
+    width: 100%;
+    height: 990px;
+    background: url(../image/background1.png);
+    position: absolute;
+    z-index: -2;
+}
+.banner-mask {
+    width: 100%;
+    height: 990px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: -1;
+}
+.banner1 .banner1-title {
+    font-size: 62px;
+    color: #fff;
+    font-weight: 100;
+    text-align: center;
+    line-height: 62px;
+    padding-top: 218px;
+}
+.banner1 .introduce {
+    width: 766px;
+    font-size: 20px;
+    line-height: 32px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 auto;
+    margin-top: 82px;
+    text-align: center;
+    font-weight: 300;
+}
+.banner1 .create-account {
+    width: 970px;
+    height: 250px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 0 auto;
+    margin-top: 104px;
+}
+.banner1 .create-account .title {
+    font-size: 16px;
+    line-height: 16px;
+    color: #fff;
+    text-align: center;
+    padding-top: 61px;
+    margin-bottom: 20px;
+}
+.banner1 .create-account .info {
+    font-size: 12px;
+    line-height: 12px;
+    color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+.banner1 .create-account form {
+    text-align: center;
+    margin-top: 46px;
+}
+.banner1 .create-account input {
+    display: inline-block;
+    margin-right: 30px;
+}
+.banner1 .create-account input[type="text"] {
+    width: 290px;
+    height: 48px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 14px;
+    line-height: 50px;
+    padding-left: 21px;
+}
+.banner1 .create-account input[type="submit"] {
+    width: 125px;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Boatloads part */
+.boatload {
+    padding: 90px 0 35px 0;
+}
+.boatload .small-title {
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 35px;
+    text-align: center;
+    font-weight: bold;
+}
+.boatload h2 {
+    width: 658px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 86px;
+}
+.boatload .feature-row {
+    width: 1080px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+.boatload .feature:first-child {
+    padding-right: 162px;
+}
+.boatload .feature {
+    display: inline-block;
+    vertical-align: top;
+}
+.boatload .feature-icon {
+    width: 52px;
+    height: 49px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 24px;
+}
+.boatload .feature-info {
+    width: 362px;
+    display: inline-block;
+}
+.boatload .feature-title {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+.boatload .feature-content {
+    font-size: 16px;
+    line-height: 26px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* banner2 part */
+.banner2 {
+    width: 100%;
+    height: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+.banner2-background {
+    width: 100%;
+    height: 800px;
+    background: url(../image/background2.png);
+    position: absolute;
+    z-index: -2;
+}
+.banner2 .banner-mask {
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: -1;
+}
+.banner2-info {
+    padding: 180px 0 0 315px;
+}
+.banner2 h2 {
+    width: 370px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+.banner2 p {
+    width: 370px;
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 65px;
+    font-weight: 300;
+}
+.banner2 button {
+    height: 60px;
+    font-size: 12px;
+    line-height: 60px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+.banner2 .btn1 {
+    width: 240px;
+    background-color: #fff;
+    margin-right: 30px;
+    border: none;
+}
+.banner2 .btn2 {
+    width: 235px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: transparent;
+    color: #fff;
+}
+.banner2 .ipad {
+    width: 585px;
+    height: 542px;
+    padding: 30px 0 30px 60px;
+    background: url(../image/ipad.png);
+    position: absolute;
+    top: 104px;
+    right: 0;
+}
+.banner2 .ipad-screen {
+    width: 585px;
+    height: 542px;
+    background: url(../image/Screen.png);
+}
+
+/* product part */
+.product {
+    padding: 95px 0 80px 0;
+    border-bottom: 1px solid #e7e7e7;
+}
+.product h2 {
+    text-align: center;
+    margin-bottom: 80px;
+}
+.product p {
+    font-size: 16px;
+    line-height: 26px;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 300;
+    text-align: center;
+}
+.product-item {
+    width: 262px;
+    display: inline-block;
+    margin-right: 85px;
+}
+.product-item:last-child {
+    margin-right: 0;
+}
+.product-item .product-logo {
+    width: 100%;
+    height: 38px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+.products {
+    width: 970px;
+    margin-right: -85px;
+    margin: 0 auto;
+}
+
+/* contentblock part */
+.contentblock {
+    padding: 110px 0 100px 0;
+    border-bottom: 1px solid #e7e7e7;
+}
+.contentblock .content {
+    width: 320px;
+}
+.contentblock .content-title {
+    font-size: 20px;
+    line-height: 32px;
+    padding-top: 72px;
+}
+.contentblock .content-info {
+    font-size: 16px;
+    line-height: 28px;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 300;
+}
+.content-row {
+    width: 970px;
+    margin: 0 auto;
+}
+.content-row > div:first-child {
+    float: left;
+}
+.content-row > div:last-child {
+    float: right;
+}
+.content-row:first-child {
+    margin-bottom: 80px;
+}
+
+/* crew part */
+.crew {
+    padding: 95px 0 90px 0;
+    border-bottom: 1px solid #e7e7e7;
+}
+.crew h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.crew p {
+    width: 685px;
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    margin: 0 auto;
+}
+.crew-introduce {
+    width: 970px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+.crew-item-left {
+    float: left;
+    position: relative;
+    margin-bottom: 30px;
+}
+.crew-item-right {
+    float: right;
+    position: relative;
+    margin-bottom: 30px;
+}
+.crew-info {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    display: none;
+}
+.crew-item-left:first-child .crew-info {
+    display: block;
+}
+.crew-info .crew-name {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 110px 0 20px 0;
+    color: #fff;
+}
+.crew-info .crew-position {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+}
+.crew-info a {
+    display: inline-block;
+    width: 51px;
+    height: 54px;
+    margin: 40px 30px 0 0;
+}
+.crew-info a:last-child {
+    margin-right: 0;
+}
+
+.crew-item-left:hover .crew-info, .crew-item-right:hover .crew-info {
+    display: block;
+}
+
+/* contracts part */
+.contracts {
+    padding: 70px 0;
+}
+.contracts-main {
+    width: 970px;
+    margin: 0 auto;
+}
+.contracts-form {
+    width: 470px;
+    height: 560px;
+    border: 1px solid #e7e7e7;
+    float: left;
+}
+.contracts-form h3 {
+    font-size: 16px;
+    line-height: 116px;
+    text-align: center;
+    font-weight: 400;
+}
+.contracts-form form {
+    width: 372px;
+    margin: 0 auto;
+}
+.contracts-form form input, .contracts-form textarea {
+    width: 350px;
+    border: 1px solid #d4d3d3;
+    margin-bottom: 30px;
+    font-size: 14px;
+    padding-left: 20px;
+    resize: none;
+}
+.contracts-form textarea {
+    font-family: Arial;
+    padding-top: 15px;
+    height: 145px;
+}
+.contracts-form form input {
+    height: 50px;
+    line-height: 50px;
+}
+.contracts-form form input[type="submit"] {
+    width: 370px;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+}
+.contracts-ways {
+    padding-top: 83px;
+    float: right;
+}
+.contracts-ways .contracts-info {
+    width: 370px;
+    font-size: 16px;
+    line-height: 26px;
+    color: rgba(0, 0, 0, 0.7);
+    margin: 30px 0 62px 0;
+}
+.contracts-ways ul {
+    list-style: none;
+}
+.contracts-ways ul span {
+    display: inline-block;
+    width: 25px;
+    height: 30px;
+    margin-right: 25px;
+}
+.contracts-ways ul p {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 28px;
+}
+
+/* footer part */
+footer {
+    width: 100%;
+    background-color: #141414;
+    padding: 88px 0 120px 0;
+}
+.footer-main {
+    width: 1170px;
+    margin: 0 auto
+}
+.link-group {
+    width: 170px;
+    margin-right: 130px;
+    float: left;
+}
+.footer-main .title {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.link-group ul {
+    list-style: none;
+}
+.link-group li a {
+    display: block;
+    font-size: 16px;
+    line-height: 46px;
+    color: rgba(212, 211, 211, 0.4);
+}
+.link-logos {
+    width: 270px;
+    float: right;
+}
+.link-logos p {
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba(212, 211, 211, 0.4);
+    margin-bottom: 40px;
+}
+.link-logos a {
+    margin-right: 20px;
+}
