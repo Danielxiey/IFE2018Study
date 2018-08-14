@@ -9,6 +9,9 @@ body {
 a {
     text-decoration: none;
 }
+img {
+    border: none;
+}
 
 /* public part */
 h2 {
@@ -25,6 +28,10 @@ h2 {
 }
 .clearfix {
     *zoom: 1;
+}
+.mainbox {
+    width: 970px;
+    margin: 0 auto;
 }
 
 /* banner1 part */
@@ -48,13 +55,15 @@ h2 {
     background-color: rgba(0, 0, 0, 0.65);
     z-index: -1;
 }
+.banner1 .mainbox {
+    padding-top: 218px;
+}
 .banner1 .banner1-title {
     font-size: 62px;
     color: #fff;
     font-weight: 100;
     text-align: center;
     line-height: 62px;
-    padding-top: 218px;
 }
 .banner1 .introduce {
     width: 766px;
@@ -145,10 +154,13 @@ h2 {
 }
 .boatload .feature-icon {
     width: 52px;
-    height: 49px;
     display: inline-block;
     vertical-align: top;
     margin-right: 24px;
+}
+.boatload .feature-icon img {
+    display: block;
+    margin: 0 auto;
 }
 .boatload .feature-info {
     width: 362px;
@@ -187,7 +199,9 @@ h2 {
     z-index: -1;
 }
 .banner2-info {
-    padding: 180px 0 0 315px;
+    width: 970px;
+    margin: 0 auto;
+    padding: 180px 0;
 }
 .banner2 h2 {
     width: 370px;
@@ -255,21 +269,24 @@ h2 {
 }
 .product-item {
     width: 262px;
-    display: inline-block;
-    margin-right: 85px;
 }
-.product-item:last-child {
-    margin-right: 0;
+.products .left {
+    float: left;
+}
+.products .right {
+    float: right;
+}
+.products .center {
+    overflow: hidden;
+    margin: 0 auto;
 }
 .product-item .product-logo {
     width: 100%;
     height: 38px;
-    text-align: center;
     margin-bottom: 35px;
 }
-.products {
-    width: 970px;
-    margin-right: -85px;
+.product-item .product-logo img {
+    display: block;
     margin: 0 auto;
 }
 
@@ -324,8 +341,6 @@ h2 {
     margin: 0 auto;
 }
 .crew-introduce {
-    width: 970px;
-    margin: 0 auto;
     padding-top: 60px;
 }
 .crew-item-left {
@@ -378,10 +393,6 @@ h2 {
 /* contracts part */
 .contracts {
     padding: 70px 0;
-}
-.contracts-main {
-    width: 970px;
-    margin: 0 auto;
 }
 .contracts-form {
     width: 470px;
@@ -494,4 +505,7 @@ footer {
 }
 .link-logos a {
     margin-right: 20px;
+}
+.link-logos .logos {
+    opacity: 0.7;
 }
