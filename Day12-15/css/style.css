@@ -54,7 +54,7 @@ html, body {
     float: left;
     width: 10px;
     height: 20px;
-    background: url(../image/Active-Highlight.png) 10px 0;
+    background: url(../image/Active-Highlight.png) -10px 0;
     margin: 20px 0 0 -20px;
 }
 
@@ -123,7 +123,7 @@ html, body {
     content: " ";
     width: 10px;
     height: 20px;
-    background: url(../image/Active-Highlight.png) 10px 0;
+    background: url(../image/Active-Highlight.png) -10px 0;
     float: left;
     margin: 7px 0 0 -30px;
 }
