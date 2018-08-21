@@ -37,3 +37,10 @@ h2 {
 .iteminfo {
     margin-bottom: 10px;
 }
+
+.btn {
+    width: 100px;
+    height: 30px;
+    line-height: 10px;
+    margin-left: 20px;
+}
