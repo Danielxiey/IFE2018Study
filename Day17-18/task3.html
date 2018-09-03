@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table {
+            border-left: 1px solid #000;
+            border-bottom: 1px solid #000;
+            border-collapse: collapse;
+        }
+        table td {
+            border: 1px solid #000;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>九九乘法表</h1>
+    <script>
+        // 九九乘法表
+        var timesTable = document.createElement('table');
+        document.body.appendChild(timesTable);
+        for(var i = 0; i < 9; i++) {
+            var row = document.createElement('tr');
+            timesTable.appendChild(row);
+        }
+
+        var rows = document.getElementsByTagName('tr');
+        for(var i = 1; i <= 9; i++) {
+            for(var j = i; j <= 9; j++) {
+                var tableCell = document.createElement('td');
+                tableCell.textContent += i + ' * ' + j + ' = ' + i * j;
+                rows[j - 1].appendChild(tableCell);
+            }
+        }
+
+        // 3的小游戏
+        for(var i = 1;i <= 100;i++) {
+            if(i % 3 === 0) {
+                console.log('PA');
+                continue;
+            } 
+            if (i.toString().indexOf('3') !== -1) {
+                console.log('PA');
+                continue;
+            }
+            console.log(i);
+        }
+    </script>
+</body>
+</html>
