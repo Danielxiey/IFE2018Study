@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>        
+    <input id="dec-number" type="number" placeholder="输入一个十进制非负整数">
+    <input id="bin-bit" type="number" placeholder="输入转化后二进制数字位数">
+    <button id="trans-btn">转化为二进制</button>
+    <p id="result">运算结果</p>
+    <script>
+        var decInput = document.getElementById('dec-number');  
+        var bitInput = document.getElementById('bin-bit');
+        var btn = document.getElementById('trans-btn');
+        var result = document.getElementById('result');  
+
+        function dec2bin(decNumber) {
+            var numArray = new Array();
+            var num;
+            if(decNumber < 0) {
+                return -1;
+            } else if(Math.floor(decNumber) !== decNumber) {
+                return -1;
+            } else {
+                while(Math.floor(decNumber / 2) !== 0) {
+                    numArray.unshift(decNumber % 2);
+                    decNumber = Math.floor(decNumber / 2);
+                }
+                numArray.unshift(decNumber % 2);
+                return numArray.join('');
+            }
+        }
+
+        btn.onclick = function() {
+            var decNumber = Number(decInput.value);
+            var bitNumber = Number(bitInput.value);
+            var binary = dec2bin(decNumber);
+            if(binary === -1) {
+                result.textContent = '运算结果：错误，请输入一个十进制非负整数';
+            } else {
+                if(bitNumber > binary.length) {
+                    console.log('bin-bit error');
+                    while(bitNumber !== binary.length) {
+                        binary = '0' + binary;
+                    }
+                }
+                result.textContent = '运算结果：' + binary;
+            }
+        }
+    </script>
+</body>
+</html>
