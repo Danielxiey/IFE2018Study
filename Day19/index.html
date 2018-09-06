@@ -59,7 +59,9 @@
         var liSelect = new Array();
         for(var i = 0; i < spans.length; i++) {
           if(spans[i].textContent === spanCont) {
-            liSelect.push(spans[i].parentNode);
+            if(spans[i].parentNode.nodeName === 'LI') {
+                liSelect.push(spans[i].parentNode);
+            }
           }
         }
         return liSelect;
