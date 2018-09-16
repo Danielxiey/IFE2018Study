@@ -95,7 +95,7 @@
                     result.innerHTML = selectText.toLowerCase();
                     break;
                 case 'clear':       //把所选输入框中内容的半角空格全部去除
-                    result.innerHTML = selectText.split(' ').join('');
+                    result.innerHTML = clearSpace(selectText);
                     break;
                 case 'replace':     //把所选输入框中内容的a全部替换成另外一个输入框中的内容
                     result.innerHTML = selectText.replace(/a/g, unselectText);
@@ -112,6 +112,17 @@
                 }
             }
             return count + 1;   //行数总是比换行符多1
+        }
+
+        //去除半角空格
+        function clearSpace(string) {
+            var textArray = new Array();            //定义一个数组
+            for(var i = 0; i < string.length; i++) {
+                if(string.charCodeAt(i) !== 32) {   //判断当前字符是否为半角空格，半角空格Unicode：32，全角空格Unicode：12288
+                    textArray.push(string[i]);      //若不是半角空格则将字符压入数组
+                }
+            }
+            return textArray.join('');              //join方法将数组中的元素组合为一个字符串并返回
         }
     </script>
 </body>
