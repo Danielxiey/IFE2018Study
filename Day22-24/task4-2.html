@@ -39,18 +39,14 @@
 
         //出队
         outBtn.onclick = function() {
-            if(queue.length == 0) {
-                queueCont.innerHTML = '队列为空';
-            } else {
-                queue.shift();
-                queueCont.innerHTML = '队列内容：' +  queue.join('&lt;-');
-            }
+            queue.shift();
+            queueCont.innerHTML = '队列内容：' +  queue.join('&lt;-');
         }
 
         //打印队头元素内容
         fontBtn.onclick = function() {
             if(queue.length == 0) {
-                result.innerHTML = '队列为空';
+                result.innerHTML = '队列为空，无队头元素';
             } else {
                 result.innerHTML = '队头元素内容：' + queue[0];
             }

@@ -41,14 +41,12 @@
         outBtn.onclick = function() {
             queue.pop();
             queueCont.innerHTML = '队列内容：' + queue.join('-&gt;');
-            newInput.value = '';
-            newInput.focus();
         }
         
         //打印队头元素内容
         fontBtn.onclick = function() {
             if(queue.length == 0) {
-                result.innerHTML = '队列为空';
+                result.innerHTML = '队列为空，无队头元素';
             } else {
                 result.innerHTML = '队头元素：' +  queue[queue.length - 1];
             }
