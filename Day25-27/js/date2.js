@@ -74,25 +74,18 @@ function showTime() {
     var hour = checkTime(hourSel.value);
     var minute = checkTime(minuteSel.value);
     var second = checkTime(secondSel.value);
-    var date = dayTime(setTime(year, month, day).getDay());
-    var selTime = year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second;
+    var tempMonth = month - 1;
+    var tempDate = new Date(+year, +tempMonth, +day, +hour, +minute, +second);
+    var date = dayTime(tempDate.getDay());
     var nowTime = new Date();
     var past;
-    if(nowTime.getTime() > Date.parse(selTime)) {
-        past = pastTime(nowTime.getTime(), Date.parse(selTime));
+    if(nowTime.getTime() > tempDate.getTime()) {
+        past = pastTime(nowTime.getTime(), tempDate.getTime());
         result.innerHTML = '现在距离' + ' ' + year + '年' + month + '月' + day + '日' + date + ' ' + hour + ':' + minute + ':' + second + ' 已经过去 ' + past;
     } else {
-        past = pastTime(nowTime.getTime(), Date.parse(selTime));
+        past = pastTime(nowTime.getTime(), tempDate.getTime());
         result.innerHTML = '现在距离' + ' ' + year + '年' + month + '月' + day + '日' + date + ' ' + hour + ':' + minute + ':' + second + ' 还有 ' + past;
     }
-}
-
-//创建一个日期对象，并将该对象的日期设置成选择的日期
-function setTime(year, month, day) {
-    month -= 1;
-    var tempDate = new Date();
-    tempDate.setFullYear(year, month, day);
-    return tempDate;
 }
 
 //获取中文的星期表示
