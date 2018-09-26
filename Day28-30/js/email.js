@@ -39,12 +39,10 @@ function createTips() {
     var text = getInput();
     var atPos = text.indexOf('@');
     var prefix;
+    var liArray = new Array();
     if(atPos != -1) {
         prefix = text.slice(atPos + 1);
         text = text.slice(0, atPos);
-    }
-    var liArray = new Array();
-    if(atPos != -1) {
         for(var i = 0; i < postfixList.length; i++) {
             if(postfixList[i].indexOf(prefix) != 0) {
                 continue;
@@ -97,7 +95,6 @@ emailSug.onclick = function (event) {
     var e = event || window.event;
     var target = e.target;
     if(target.nodeName.toLowerCase() == 'li') {
-        console.log(target.innerHTML);
         emailInput.value = htmlDecode(target.innerHTML);
         hidden();
     }

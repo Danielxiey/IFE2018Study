@@ -40,12 +40,10 @@ function createTips() {
     var text = getInput();
     var atPos = text.indexOf('@');
     var prefix;
+    var liArray = new Array();
     if(atPos != -1) {
         prefix = text.slice(atPos + 1);
         text = text.slice(0, atPos);
-    }
-    var liArray = new Array();
-    if(atPos != -1) {
         for(var i = 0; i < postfixList.length; i++) {
             if(postfixList[i].indexOf(prefix) != 0) {
                 continue;
@@ -55,7 +53,6 @@ function createTips() {
             liArray.push(newLi);    //将生成的所有新的li放进一个数组
         }
     }
-    
     if(liArray.length == 0) {
         for(var i = 0; i < postfixList.length; i++) {
             var newLi = document.createElement('li');
@@ -99,7 +96,6 @@ emailSug.onclick = function (event) {
     var e = event || window.event;
     var target = e.target;
     if(target.nodeName.toLowerCase() == 'li') {
-        console.log(target.innerHTML);
         emailInput.value = htmlDecode(target.innerHTML);
         hidden();
     }
@@ -122,7 +118,7 @@ emailInput.onkeyup = function(event) {
         } else {
             nowSel = postfixList.length - 1;
         }
-        document.querySelectorAll('.email-sug li')[nowSel].className = 'active';
+        lis[nowSel].className = 'active';
     }
     if(code == 40) {
         activeLi.className = '';
