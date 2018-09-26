@@ -1,0 +1,10 @@
+/* 表格样式 */
+#table-wrapper {
+    border-collapse: collapse;
+}
+#table-wrapper td, #table-wrapper th {
+    border: 1px solid #000;
+    text-align: center;
+    width: 80px;
+    height: 30px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我是精明的小卖家</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="selects">
+        <select id="region-select">
+            <option value="">请选择区域</option>
+            <option value="华东">华东</option>
+            <option value="华南">华南</option>
+            <option value="华北">华北</option>
+        </select>
+        <select id="product-select">
+            <option value="">请选择商品种类</option>
+            <option value="手机">手机</option>
+            <option value="笔记本">笔记本</option>
+            <option value="智能音箱">智能音箱</option>
+        </select>
+    </div>
+
+    <div id="region-checkbox-wrapper">
+        请选择区域：
+        <input type="checkbox" value="华东" class="single">华东
+        <input type="checkbox" value="华南" class="single">华南
+        <input type="checkbox" value="华北" class="single">华北
+        <input type="checkbox" value="全选" check-type="all">全选
+    </div>
+    <div id="product-checkbox-wrapper">
+        请选择商品种类：
+        <input type="checkbox" value="手机" class="single">手机
+        <input type="checkbox" value="笔记本" class="single">笔记本
+        <input type="checkbox" value="智能音箱" class="single">智能音箱
+        <input type="checkbox" value="全选" check-type="all">全选
+    </div>
+
+    <table id="table-wrapper"></table>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
