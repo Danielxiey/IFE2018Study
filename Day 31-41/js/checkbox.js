@@ -1,8 +1,4 @@
 //根据checkbox选项获取数据并绘制表格
-var regionCheckbox = document.getElementById('region-checkbox-wrapper');
-var productCheckbox = document.getElementById('product-checkbox-wrapper');
-var checkboxes = document.getElementById('checkboxes');
-
 //多选框功能函数
 function checkboxFunc(event) {      //采用事件委托
     var e = event || window.event;
@@ -204,4 +200,3 @@ function drawCheckboxTable(targetData) {
         }
     }
 }
-

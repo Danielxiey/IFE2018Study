@@ -1,9 +1,4 @@
 //根据select选项获取数据并绘制表格
-var selects = document.getElementById('selects');
-var regionSel = document.getElementById('region-select');
-var productSel = document.getElementById('product-select');
-var tableWrap = document.getElementById('table-wrapper');
-
 //根据select选项获取数据
 function getSeldata() {
     var region = regionSel.value;
