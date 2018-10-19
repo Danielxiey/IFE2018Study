@@ -2,29 +2,11 @@ var tableWrap = document.getElementById('table-wrapper');
 var tcellValue = 0;
 var tableEdit = 0;
 
-// 当鼠标滑过任何一行时，把这一行的数据在两个图表中进行呈现
-tableWrap.addEventListener('mouseover', function(event) {
-    var e = event || window.event;
-    var target = e.target;
-    var dataArray = new Array();    
-    if(target.nodeName.toLowerCase() == 'td') {
-        var items = target.parentNode.childNodes;
-        for(var i = 0; i < 12; i++) {
-            dataArray.unshift(Number(items[items.length - 1 - i].innerHTML));
-        }
-    }
-    var ctx = line.getContext('2d');
-    ctx.clearRect(0,0,600,380);
-    bar.innerHTML = '';
-    drawBar(dataArray);
-    drawLine(dataArray);
-});
-
 // 当鼠标滑动过某一个数字的单元格时，数字旁边显示一个铅笔的icon
 tableWrap.addEventListener('mouseover', function(event) {
     var e = event || window.event;
     var target = e.target;
-    if(target.nodeName.toLowerCase() == 'td' && !isNaN(target.innerHTML)) {
+    if(target.nodeName.toLowerCase() == 'td' && !isNaN(target.innerHTML) && tableEdit != 1) {
         target.style.background = "url('images/edit.png') right center no-repeat";
     }
 });

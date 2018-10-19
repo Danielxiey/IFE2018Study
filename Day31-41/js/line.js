@@ -71,7 +71,7 @@ function proportion(targetData) {
     for(var i = 0; i < targetData.length; i++) {
         var tempArray = targetData[i].sale;
         for(var j = 0; j < tempArray.length; j++) {
-            if(tempArray[j] > maxdata) {
+            if(Number(tempArray[j]) > maxdata) {
                 maxdata = tempArray[j];
             }
         }
