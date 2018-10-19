@@ -7,4 +7,19 @@
     text-align: center;
     width: 80px;
     height: 30px;
+    position: relative;
+}
+#table-wrapper input {
+    border: none;
+    text-align: center;
+    width: 80px;
+    height: 30px;
+    padding: 0;
+    font-size: 16px;
+}
+#table-wrapper td button {
+    width: 40px;
+    height: 20px;
+    font-size: 12px;
+    position: abosulte;
 }

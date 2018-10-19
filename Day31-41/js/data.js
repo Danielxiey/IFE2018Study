@@ -35,3 +35,9 @@ let sourceData = [{
     region: "华南",
     sale: [10, 40, 10, 6, 5, 6, 8, 6, 6, 6, 7, 26]
 }]
+
+//如果localStorage中有保存的数据，则读取数据
+if(localStorage.getItem('saveData')) {
+    sourceData = localStorage.getItem('saveData');
+    sourceData = JSON.parse(sourceData);
+}

@@ -107,6 +107,8 @@ function drawCheckboxTable(targetData) {
                     var tcell = document.createElement('td');
                     trow.appendChild(tcell);
                 }
+                trow.setAttribute('product', targetData[i].product);
+                trow.setAttribute('region', targetData[i].region);
                 var k = 0;
                 if(cols == 14) {
                     trow.childNodes[0].textContent = targetData[i].region;
@@ -133,6 +135,8 @@ function drawCheckboxTable(targetData) {
                         var tcell = document.createElement('td');
                         trow.appendChild(tcell);
                     }
+                    trow.setAttribute('product', targetData[i].product);
+                    trow.setAttribute('region', targetData[i].region);
                     var k = 0;                              //定义k来指示当前行的所在的单元格位置
                     if(cols == 14) {                        //若是商品种类的第一行（14个单元格）
                         trow.childNodes[0].textContent = targetData[i].product;     //设置商品种类
@@ -160,6 +164,8 @@ function drawCheckboxTable(targetData) {
                                 var tcell = document.createElement('td');
                                 trow.appendChild(tcell);
                             }
+                            trow.setAttribute('product', targetData[i].product);
+                            trow.setAttribute('region', targetData[i].region);
                             var k = 0;
                             if(cols == 14) {
                                 trow.childNodes[0].textContent = targetData[i].product;
@@ -190,6 +196,8 @@ function drawCheckboxTable(targetData) {
                         var tcell = document.createElement('td');
                         trow.appendChild(tcell);
                     }
+                    trow.setAttribute('product', targetData[i].product);
+                    trow.setAttribute('region', targetData[i].region);
                     trow.childNodes[0].textContent = targetData[i].product;
                     trow.childNodes[1].textContent = targetData[i].region;
                     for(k = 2;k < 14; k++) {

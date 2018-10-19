@@ -31,6 +31,8 @@ function drawSeltable(targetData) {
             var tcell = document.createElement('td');               //创建表格单元
             trow.appendChild(tcell);                                //将表格单元添加到新行
         }
+        trow.setAttribute('product', targetData[i].product);
+        trow.setAttribute('region', targetData[i].region);
         trow.childNodes[0].textContent = targetData[i].product;     //设置单元格的值
         trow.childNodes[1].textContent = targetData[i].region;
         for(var k = 0; k < 12; k++) {   
