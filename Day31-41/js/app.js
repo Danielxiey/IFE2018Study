@@ -14,6 +14,7 @@ selects.onchange = function() {
     var targetData = getSeldata();
     drawSeltable(targetData);
     drawLines(targetData);
+    drawBars(targetData);
     saveState();
 }
 
@@ -26,6 +27,7 @@ checkboxes.onclick = function() {
     var targetData = getCheckdata();
     drawCheckboxTable(targetData);
     drawLines(targetData);
+    drawBars(targetData);
     saveState();
 }
 
@@ -39,13 +41,27 @@ tableWrap.addEventListener('mouseover', function(event) {
         for(var i = 0; i < 12; i++) {
             dataArray.unshift(Number(items[items.length - 1 - i].innerHTML));
         }
+        var ctx = line.getContext('2d');
+        ctx.clearRect(0,0,600,380);
+        bar.innerHTML = '';
+        drawBar(dataArray);
+        drawLine(dataArray);
+    } 
+    else {
+        var targetData = getCheckdata();
+        drawLines(targetData);
+        drawBars(targetData);
     }
-    var ctx = line.getContext('2d');
-    ctx.clearRect(0,0,600,380);
-    bar.innerHTML = '';
-    drawBar(dataArray);
-    drawLine(dataArray);
 });
+
+// 当鼠标移除数据行时，恢复为原本的图表
+tableWrap.addEventListener('mouseout', function(e) {
+    if(e.target.nodeName.toLowerCase() != 'td') {
+        var targetData = getCheckdata();
+        drawLines(targetData);
+        drawBars(targetData);
+    }
+})
 
 //保存数据到localStorage
 saveBtn.onclick = saveData;
@@ -55,5 +71,6 @@ saveBtn.onclick = saveData;
 
 // 渲染记录的页面状态
 render();
+
 //页面前进后退时触发渲染函数
 window.onpopstate = render;

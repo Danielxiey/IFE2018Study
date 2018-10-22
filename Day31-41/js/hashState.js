@@ -86,4 +86,5 @@ function render() {
     var targetData = getCheckdata();
     drawCheckboxTable(targetData);
     drawLines(targetData);
+    drawBars(targetData);
 }

@@ -8,8 +8,8 @@ function drawLine(data,lineColor,ratio) {
         //绘制坐标轴
         ctx.beginPath();
         ctx.strokeStyle = "#000";
-        ctx.moveTo(15,25);
-        ctx.lineTo(15,340);
+        ctx.moveTo(20,25);
+        ctx.lineTo(20,340);
         ctx.lineTo(540,340);
         ctx.lineWidth = 2;
         ctx.stroke();
@@ -26,14 +26,22 @@ function drawLine(data,lineColor,ratio) {
             proportion = maxdata / 304;
         } else {
             proportion = ratio;
+            maxdata = Math.floor(proportion * 304);
         }
+        if(!lineColor) {
+            lineColor = '#F2635E';
+        } 
         
         //绘制折线图
         //定义折线的间隔、样式
         var gap = 42;
-        if(!lineColor) {
-            lineColor = '#c23531';
-        } 
+        ctx.beginPath();
+        ctx.fillStyle = '#000';
+        ctx.fillText(maxdata, 0, 36);
+        var month = ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'];
+        for(var i = 0; i < 12; i++) {
+            ctx.fillText(month[i], 35 + i * gap, 360);
+        }
         ctx.strokeStyle = lineColor;
         ctx.fillStyle = '#fff';
         
@@ -65,9 +73,10 @@ function drawLine(data,lineColor,ratio) {
     }
 }
 
-//计算多组数据时的数据比例，以绘制折线图
+//计算多组数据时的数据比例，以绘制折线图和条形图
 function proportion(targetData) {
     var maxdata = 0;
+    var proportion = 0;
     for(var i = 0; i < targetData.length; i++) {
         var tempArray = targetData[i].sale;
         for(var j = 0; j < tempArray.length; j++) {
@@ -76,13 +85,13 @@ function proportion(targetData) {
             }
         }
     }
-    var proportion = maxdata / 304;
+    proportion = maxdata / 304;
     return proportion;
 }
 
 //绘制多条折线
 function drawLines(targetData) {
-    var lineColor = ['#c23531','#4cabce','#ca8622','#91c7ae','#6e7074','#bda29a','#ffd338','#24c1c5','#ff5218'];
+    var lineColor = ['#F2635E','#79C2AA','#F4DC78','#00C8EB','#D9821C','#6989AA','#7CCB8F','#FF9A3B','#9C95F5'];
     var ctx = line.getContext('2d');
     var ratio = proportion(targetData);
     ctx.clearRect(0,0,600,380);
