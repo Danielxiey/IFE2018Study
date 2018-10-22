@@ -14,6 +14,7 @@ selects.onchange = function() {
     var targetData = getSeldata();
     drawSeltable(targetData);
     drawLines(targetData);
+    saveState();
 }
 
 //给复选框绑定相关逻辑函数
@@ -25,6 +26,7 @@ checkboxes.onclick = function() {
     var targetData = getCheckdata();
     drawCheckboxTable(targetData);
     drawLines(targetData);
+    saveState();
 }
 
 // 当鼠标滑过任何一行时，把这一行的数据在两个图表中进行呈现
@@ -50,3 +52,8 @@ saveBtn.onclick = saveData;
 
 // 测试清除缓存用
 // localStorage.clear();
+
+// 渲染记录的页面状态
+render();
+//页面前进后退时触发渲染函数
+window.onpopstate = render;
