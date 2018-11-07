@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="js/class.js"></script>
+    <script>
+        var restaurant = new Restaurant(1000000, 20);
+
+        var newCook = new Chef(1, "Tony", 10000);
+        restaurant.hire(newCook);
+
+        console.log(restaurant.employees);
+
+        restaurant.fire(newCook);
+        console.log(restaurant.employees);
+    </script>
+</body>
+</html>
