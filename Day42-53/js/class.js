@@ -30,14 +30,13 @@ function Waiter(id, name, salary) {
     Staff.call(this, id, name, salary);
 }
 
-Waiter.prototype.service = function(Customer, Dishes, Chef) {
-    if(typeof Dishes == Array) {
-        for(var i = 0; i < Dishes.length; i++) {
-            Customer.order(Dishes[i]);
-            Chef.cook(Dishes, this);
-        }
+Waiter.prototype.service = function(arg, customer) {
+    if(arg instanceof Array) {
+        console.log('服务员点菜！');
+        return customer.order(arg);
     } else {
-        Customer.eat(Dishes);
+        console.log('服务员上菜');
+        customer.eat(arg);
     }
 }
 
@@ -46,27 +45,28 @@ function Chef(id, name, salary) {
     Staff.call(this, id, name, salary);
 }
 
-Chef.prototype.cook = function(Dishes, Waiter) {
-    var dishesArray = [];
-    dishesArray.push(Dishes);
-    Waiter.service(dishesArray);
+Chef.prototype.cook = function(dish, Waiter) {
+    console.log('厨师烹饪食物');
+    Waiter.service(dish, currentCustomer);
 }
 
 // 顾客类
-function Customer() {
-    this.dishes = [];
-}
+function Customer() {}
 
-Customer.prototype.order = function(Dishes) {
-    this.dishes.push(Dishes);
+Customer.prototype.order = function(menu) {
+    var orderNum = Math.floor(Math.random() * menu.length);
+    console.log('吃' + menu[orderNum].name + '~');
+    return menu[orderNum];
 }
 
 Customer.prototype.eat = function(Dishes) {
-    for(var i = 0; i < this.dishes.length; i++) {
-        if(this.dishes[i].name == Dishes.name) {
-            this.dishes = this.dishes.slice(0, i).concat(this.dishes.slice(i + 1));
-        }
-    }
+    // for(var i = 0; i < this.dishes.length; i++) {
+    //     if(this.dishes[i].name == Dishes.name) {
+    //         this.dishes = this.dishes.slice(0, i).concat(this.dishes.slice(i + 1));
+    //     }
+    // }
+    // restaurant.cash += Dishes.price;
+    console.log('顾客吃菜');
 }
 
 // 菜品类
