@@ -28,6 +28,7 @@ function Staff(id, name, salary) {
 //  服务员
 function Waiter(id, name, salary) {
     Staff.call(this, id, name, salary);
+    
 }
 
 Waiter.prototype.service = function(arg, customer) {
@@ -40,15 +41,35 @@ Waiter.prototype.service = function(arg, customer) {
     }
 }
 
+var singletonWaiter = (function() {
+    var instance = null;
+    return function(id, name, salary) {
+        if(!instance) {
+            instance = new Waiter(id, name, salary);
+        }
+        return instance;
+    }
+})()
+
 // 厨师类
 function Chef(id, name, salary) {
     Staff.call(this, id, name, salary);
 }
 
-Chef.prototype.cook = function(dish, Waiter) {
+Chef.prototype.cook = function(Dish, Waiter) {
     console.log('厨师烹饪食物');
-    Waiter.service(dish, currentCustomer);
+    Waiter.service(Dish, currentCustomer);
 }
+
+var singletonChef = (function() {
+    var instance = null;
+    return function(id, name, salary) {
+        if(!instance) {
+            instance = new Chef(id, name, salary);
+        }
+        return instance;
+    }
+})()
 
 // 顾客类
 function Customer() {}

@@ -11,5 +11,14 @@
     <script src="js/class.js"></script>
     <script src="js/init.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        var newCook = new Chef("Tony", 10000);
+        restaurant.hire(newCook);
+
+        console.log(restaurant.employees);
+
+        restaurant.fire(newCook);
+        console.log(restaurant.employees);
+    </script>
 </body>
 </html>

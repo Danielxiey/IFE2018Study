@@ -2,11 +2,11 @@
 var restaurant = new Restaurant(1000, 1);
 
 //雇佣了一个厨师
-var newCook = new Chef(1, "Tony", 3000);
+var newCook = singletonChef(1, "MaHao", 3000);
 restaurant.hire(newCook);
 
 //雇佣了一个服务员
-var newWaiter = new Waiter(2, 'XiaoNan', 1000);
+var newWaiter = singletonWaiter(2, 'XiaoNan', 1000);
 restaurant.hire(newWaiter);
 
 while(cutomersList.length > 0) {
